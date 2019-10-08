@@ -6,16 +6,16 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:15:56 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/07 11:35:13 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:28:38 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
