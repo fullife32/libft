@@ -6,11 +6,11 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:38:47 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/08 13:56:50 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:13:33 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int i;
 
