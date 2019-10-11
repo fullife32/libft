@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 14:51:13 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/09 15:11:30 by eassouli         ###   ########.fr       */
+/*   Created: 2019/10/09 19:17:52 by eassouli          #+#    #+#             */
+/*   Updated: 2019/10/10 16:40:56 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
 
-int	ft_isascii(int c)
+#include <stdio.h>
+#include <stdlib.c>
+#include <string.h>
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	size_t i;
+
+	i = 0;
+	if (!dst || !src)
+		return (0);
+
 }
