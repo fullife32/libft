@@ -1,45 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 19:17:52 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/12 15:31:34 by eassouli         ###   ########.fr       */
+/*   Created: 2019/10/12 15:40:15 by eassouli          #+#    #+#             */
+/*   Updated: 2019/10/12 16:16:19 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include "libft.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
 	size_t j;
+	size_t n;
 
 	i = 0;
-	j = 0;
-	if (!dst || !src)
-		return (0);
-	while (dst[i] && i < dstsize)
-		i++;
-	while (src[j])
+	n = 0;
+	if (!haystack)
+		return (NULL);
+	if (needle == NULL)
+		return ((char *)haystack);
+	while (haystack[i] && i < len)
 	{
-		dst[i] = src[j];
+		j = i;
+		while (needle[n] == haystack[j] && j < len)
+		{
+			j++;
+			n++;
+			if (needle[n] == '\0')
+				return ((char *)haystack + i);
+		}
+		n = 0;
 		i++;
-		j++;
 	}
-	return (i);
+	return (NULL);
 }
 
 int	main(int ac, char **av)
 {
 	(void)ac;
 
-	printf("%lu\n%lu\n", ft_strlcat(av[1], av[2], atoi(av[3])), strlcat(av[4], av[5], atoi(av[6])));
+	printf("%s\n%s\n", ft_strnstr(av[1], av[2], atoi(av[3])), strnstr(av[1], av[2], atoi(av[3])));
 	return (0);
 }
