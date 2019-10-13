@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 19:17:52 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/13 04:04:31 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/13 04:30:20 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 		j++;
 	}
+	dst[i] = src[j];
 	return (i);
 }
