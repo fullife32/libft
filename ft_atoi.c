@@ -6,11 +6,11 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:45:48 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/09 15:09:40 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/13 04:00:31 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
