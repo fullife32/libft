@@ -6,10 +6,12 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 20:20:13 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/14 20:21:38 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/14 20:27:10 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	*calloc(size_t count, size_t size)
+{
+}
