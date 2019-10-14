@@ -6,7 +6,7 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/14 20:29:15 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/14 20:56:56 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ SRCS		= \
 			  ft_strlcat.c\
 			  ft_strnstr.c\
 			  ft_atoi.c\
+			  ft_calloc.c\
+			  ft_strdup.c
 
 OBJS		= $(SRCS:.c=.o)
 
