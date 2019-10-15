@@ -8,7 +8,7 @@ char        *ft_strtrim(char const *s1, char const *set)
     i = 0;
     if (!(str = malloc(sizeof(char) * (ft_strlen(s1) + 1))))
         return (0);
-    while (s1[i])
+    while (s1[i] == set[i])
     {
         
     }
