@@ -6,7 +6,7 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/14 20:56:56 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/15 15:53:39 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,6 @@ SRCS		= \
 			  ft_strdup.c\
 			  ft_substr.c\
 			  ft_strjoin.c\
-			  ft_strtrim.c
 
 OBJS		= $(SRCS:.c=.o)
 
