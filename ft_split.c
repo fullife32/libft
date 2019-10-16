@@ -37,9 +37,10 @@ char	**ft_alloc_split(char const *s, char c)
 	{
 		if (s[i] == c)
 			b = 0;
-		else if (s[i] != c && b == 0)
+		else
 		{
-			w++;
+			if (b == 0)
+				w++;
 			b = 1;
 		}
 		i++;
@@ -72,11 +73,11 @@ char	*ft_tab_split(char const *s, char c, size_t i)
 		return (0);
 	while (s[i] && s[i] != c)
 	{
-		strsplit = s[i];
+		strsplit[j] = s[i];
 		i++;
 		j++;
 	}
-	strsplit = '\0';
+	strsplit[j] = '\0';
 	return (strsplit);
 }
 
