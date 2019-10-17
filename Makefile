@@ -6,7 +6,7 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/15 16:21:03 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/17 18:11:47 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,12 @@ SRCS		= \
 			  ft_strjoin.c\
 			  ft_strtrim.c
 
-OBJS		= $(SRCS:.c=.o)
+SRCS_BONUS	= \
+
+
+OBJS		= srcs/$(SRCS:.c=.o)
+
+OBJS_BONUS	= srcs/$(SRCS_BONUS:.c=.o)
 
 INC_DIR		= .
 
@@ -56,7 +61,7 @@ FLAGS		= -Wall -Wextra -Werror -I ${HEADER}
 all: $(NAME)
 
 $(NAME): ${OBJS}
-	ar rc $@ $?
+	ar rc $(NAME) $(OBJS)
 
 %.o: %.c
 	${CC} $(FLAGS) -o $@ -c $< -I $(INC_DIR)
@@ -64,9 +69,12 @@ $(NAME): ${OBJS}
 clean:
 	${RM} $(OBJS)
 
-fclean: 	clean
+fclean:	clean
 	${RM} $(NAME)
 
-re:			fclean all
+re:				fclean all
+
+bonus:		 all $(OBJS_BONUS)
+	ar -crs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 .PHONY:		all clean fclean re
