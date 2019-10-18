@@ -6,13 +6,13 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/18 14:00:01 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/18 14:09:40 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 HEADER		= .
 
-SRCS		= $(addprefix srcs/, \
+SRCS		= \
 			  ft_memset.c\
 			  ft_bzero.c\
 			  ft_memcpy.c\
@@ -42,7 +42,7 @@ SRCS		= $(addprefix srcs/, \
 			  ft_strtrim.c\
 			  ft_split.c\
 			  ft_itoa.c\
-			  ft_strmapi.c)
+			  ft_strmapi.c
 
 SRCS_BONUS	= \
 
