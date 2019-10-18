@@ -6,7 +6,7 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/18 13:56:24 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/18 14:00:01 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,13 +39,16 @@ SRCS		= $(addprefix srcs/, \
 			  ft_strdup.c\
 			  ft_substr.c\
 			  ft_strjoin.c\
-			  ft_strtrim.c)
+			  ft_strtrim.c\
+			  ft_split.c\
+			  ft_itoa.c\
+			  ft_strmapi.c)
 
 SRCS_BONUS	= \
 
 OBJS		= $(SRCS:.c=.o)
 
-OBJS_BONUS	= srcs/$(SRCS_BONUS:.c=.o)
+OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
 NAME		= libft.a
 
