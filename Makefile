@@ -6,13 +6,13 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/18 13:47:11 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/18 13:56:24 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-HEADER		= libft.h
+HEADER		= .
 
-SRCS		= \
+SRCS		= $(addprefix srcs/, \
 			  ft_memset.c\
 			  ft_bzero.c\
 			  ft_memcpy.c\
@@ -39,16 +39,13 @@ SRCS		= \
 			  ft_strdup.c\
 			  ft_substr.c\
 			  ft_strjoin.c\
-			  ft_strtrim.c
+			  ft_strtrim.c)
 
 SRCS_BONUS	= \
 
-
-OBJS		= srcs/$(SRCS:.c=.o)
+OBJS		= $(SRCS:.c=.o)
 
 OBJS_BONUS	= srcs/$(SRCS_BONUS:.c=.o)
-
-INC_DIR		= .
 
 NAME		= libft.a
 
@@ -64,7 +61,7 @@ $(NAME): ${OBJS}
 	ar rc $(NAME) $(OBJS)
 
 %.o: %.c
-	${CC} $(FLAGS) -o $@ -c $< -I $(INC_DIR)
+	${CC} $(FLAGS) -o $@ -c $<
 
 clean:
 	${RM} $(OBJS)
