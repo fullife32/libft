@@ -87,23 +87,11 @@ char	**ft_split(char const *s, char c)
 				return (ft_leak(split, tab));
 			while (s[i] && s[i] != c)
 				i++;
+			i--;
 			tab++;
 		}
 		i++;
 	}
 	split[tab] = 0;
 	return (split);
-}
-
-int	main()
-{
-	size_t	i = 0;
-	char	**split = ft_split(" salut ca va ", ' ');
-
-	while (i < 4)
-	{
-		printf("%s\n", split[i]);
-		i++;
-	}
-	return (0);
 }
