@@ -6,11 +6,9 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/18 14:09:40 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/20 11:05:07 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-HEADER		= .
 
 SRCS		= \
 			  ft_memset.c\
@@ -58,27 +56,29 @@ NAME		= libft.a
 
 CC			= gcc
 
+FLAGS		= -Wall -Wextra -Werror -I $(HEADER)
+
+HEADER		= .
+
 RM			= rm -f
 
-FLAGS		= -Wall -Wextra -Werror -I ${HEADER}
+all:		$(NAME)
 
-all: $(NAME)
-
-$(NAME): ${OBJS}
+$(NAME):	$(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 %.o: %.c
-	${CC} $(FLAGS) -o $@ -c $<
+	$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
-	${RM} $(OBJS)
+	$(RM) $(OBJS)
 
 fclean:	clean
-	${RM} $(NAME)
+	$(RM) $(NAME)
 
-re:				fclean all
+re:			fclean all
 
-bonus:		 all $(OBJS_BONUS)
-	ar -crs $(NAME) $(OBJS) $(OBJS_BONUS)
+bonus:		all $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 .PHONY:		all clean fclean re
