@@ -71,7 +71,7 @@ $(NAME):	$(OBJS)
 	$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:	clean
 	$(RM) $(NAME)
