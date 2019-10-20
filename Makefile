@@ -6,7 +6,7 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/20 13:45:01 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/20 17:11:39 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,8 @@ SRCS		= \
 			  ft_putnbr_fd.c
 
 SRCS_BONUS	= \
+			  ft_lstnew.c\
+			  ft_lstadd_front.c
 
 OBJS		= $(SRCS:.c=.o)
 

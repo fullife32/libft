@@ -6,66 +6,47 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 12:30:45 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/20 11:25:39 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/20 15:52:33 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_intcount(unsigned int n)
+int		ft_intcount(int n)
 {
-	int i;
+	int count;
 
-	i = 0;
-	while (n / 10 > 0)
+	count = 0;
+	if (n < 0)
+		n = -n;
+	while (n)
 	{
 		n = n / 10;
-		i++;
+		count++;
 	}
-	return (i + 1);
+	return (count);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int				i;
-	int				neg;
-	unsigned int	nn;
+	int				count;
+	unsigned int	num;
 	char			*nb;
 
-	neg = 0;
-	if (n < 0)
-	{
-		nn = (unsigned int)n * -1;
-		i = ft_intcount(nn) + 1;
-		neg = 1;
-	}
+	if (n <= 0)
+		count = ft_intcount(n) + 1;
 	else
-	{
-		nn = n;
-		i = ft_intcount(nn);
-	}
-	if (!(nb = malloc(sizeof(char) * (i + 1))))
+		count = ft_intcount(n);
+	if (!(nb = malloc(sizeof(char) * (count + 1))))
 		return (0);
-	nb[i] = '\0';
-	i--;
-	if (neg == 1)
+	nb[count] = '\0';
+	num = n < 0 ? -n : n;
+	while (count--)
 	{
-		while (i > 0)
-		{
-			nb[i] = nn % 10 + '0';
-			nn = nn / 10;
-			i--;
-		}
+		nb[count] = num % 10 + '0';
+		num = num / 10;
+	}
+	if (n < 0)
 		nb[0] = '-';
-	}
-	else
-	{
-		while (i >= 0)
-		{
-			nb[i] = nn % 10 + '0';
-			nn = nn / 10;
-			i--;
-		}
-	}
 	return (nb);
 }
