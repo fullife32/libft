@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 20:20:13 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/14 20:48:55 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/20 14:09:53 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,10 @@ void	*ft_calloc(size_t count, size_t size)
 	char	*ptr;
 
 	ptr = NULL;
-	i = size * count;
+	i = count * size;
 	if (!(ptr = malloc(i)))
 		return (0);
-	while (i > 0)
-	{
-		i--;
+	while (i--)
 		ptr[i] = '\0';
-	}
 	return ((void *)ptr);
 }
