@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 16:22:59 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/17 16:45:00 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/20 12:19:55 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 	size_t	tab;
 	char	**split;
 
+	if (!s)
+		return (0);
 	if ((split = ft_alloc(s, c)) == 0)
 		return (0);
 	i = 0;

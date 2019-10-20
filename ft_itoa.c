@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 12:30:45 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/17 14:59:51 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/20 11:25:39 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char			*ft_itoa(int n)
 {
 	int				i;
 	int				neg;
-	unsigned  int	nn;
+	unsigned int	nn;
 	char			*nb;
 
 	neg = 0;

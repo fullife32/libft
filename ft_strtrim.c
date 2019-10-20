@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:44:59 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/15 16:17:44 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/20 12:19:15 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*str;
 
+	if (!s1 || !set)
+		return (0);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (s1[start] && ft_isset(s1[start], set) == 1)

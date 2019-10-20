@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 17:45:48 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/13 04:00:31 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/20 12:08:40 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		nb = nb * 10 + (str[i] - 48);
+		nb = nb * 10 + (str[i] - '0');
 		i++;
 	}
-	return (sign == -1 ? -nb : nb);
+	if (sign == -1)
+		nb = -nb;
+	return (nb);
 }
