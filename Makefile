@@ -6,7 +6,7 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/20 11:05:07 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/20 13:45:01 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,13 +67,13 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 	ar rc $(NAME) $(OBJS)
 
-%.o: %.c
+%.o:		%.c
 	$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
 
-fclean:	clean
+fclean:		clean
 	$(RM) $(NAME)
 
 re:			fclean all
