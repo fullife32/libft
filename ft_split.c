@@ -6,17 +6,20 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 16:22:59 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/20 12:19:55 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/21 12:07:57 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char	**ft_leak(char **split, size_t tab)
+char	**ft_leak(char **split, int tab)
 {
-	while (--tab > 0)
+	while (tab >= 0)
+	{
 		free(split[tab]);
+		tab--;
+	}
 	free(split);
 	return (NULL);
 }
@@ -72,7 +75,7 @@ char	**ft_alloc(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	size_t	tab;
+	int		tab;
 	char	**split;
 
 	if (!s)

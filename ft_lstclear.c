@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 17:45:48 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/21 12:01:04 by eassouli         ###   ########.fr       */
+/*   Created: 2019/10/21 11:08:37 by eassouli          #+#    #+#             */
+/*   Updated: 2019/10/21 11:53:28 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	i;
-	int	nb;
-	int	sign;
+	t_list	*first;
+	t_list	*last;
 
-	i = 0;
-	nb = 0;
-	sign = 0;
-	if (!str)
-		return (0);
-	while (str[i] == '\v' || str[i] == '\r' || str[i] == '\t'
-			|| str[i] == '\f' || str[i] == '\n' || str[i] == ' ')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (!*lst || !del)
+		return ;
+	first = *lst;
+	while (first != NULL)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		last = ft_lstlast(first);
+		(*del)((void *)last->content);
+		free(last);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nb = nb * 10 + (str[i] - '0');
-		i++;
-	}
-	return (sign == -1 ? -nb : nb);
 }

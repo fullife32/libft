@@ -6,7 +6,7 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/21 11:00:40 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/21 11:20:34 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,8 @@ SRCS_BONUS	= \
 			  ft_lstsize.c\
 			  ft_lstlast.c\
 			  ft_lstadd_back.c\
-			  ft_lstdelone.c
+			  ft_lstdelone.c\
+			  ft_lstclear.c
 
 OBJS		= $(SRCS:.c=.o)
 
