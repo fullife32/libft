@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 11:08:37 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/21 11:53:28 by eassouli         ###   ########.fr       */
+/*   Created: 2019/10/21 15:29:34 by eassouli          #+#    #+#             */
+/*   Updated: 2019/10/21 15:29:35 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*tmp;
 	t_list	*list;
+	t_list	*first;
+	int		i = 0;
 
-	list = *lst;
-	while (list != NULL)
+	if (!lst || !f || !del)
+		return (0);
+	while (lst != NULL)
 	{
-		tmp = list;
+		if (!(list = malloc(sizeof(size_t))))
+		{
+			ft_lstclear(&first, (*del)(void *)(first->content));
+			return (0);
+		}
+		if (i++ == 0)
+			first = list;
+		list = (*f)((void *)lst->content);
 		list = list->next;
-		(*del)((void *)tmp->content);
-		free(tmp);
+		lst = lst->next;
 	}
-	*lst = NULL;
+	return (first);
 }
