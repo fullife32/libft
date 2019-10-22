@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 15:29:34 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/21 15:29:35 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/22 12:21:12 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*first;
 	t_list	*list;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	list = ft_lstnew(f(lst->content));
 	first = list;
