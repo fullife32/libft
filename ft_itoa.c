@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_intcount(int n)
+static int	ft_intcount(int n)
 {
 	int count;
 
@@ -27,7 +27,7 @@ int		ft_intcount(int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int				count;
 	unsigned int	num;

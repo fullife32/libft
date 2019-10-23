@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-char	**ft_leak(char **split, int tab)
+static char	**ft_leak(char **split, int tab)
 {
 	while (tab >= 0)
 	{
@@ -24,7 +24,7 @@ char	**ft_leak(char **split, int tab)
 	return (NULL);
 }
 
-char	*ft_sep(char const *s, char c, size_t i)
+static char	*ft_sep(char const *s, char c, size_t i)
 {
 	size_t	l;
 	size_t	t;
@@ -46,7 +46,7 @@ char	*ft_sep(char const *s, char c, size_t i)
 	return (split);
 }
 
-char	**ft_alloc(char const *s, char c)
+static char	**ft_alloc(char const *s, char c)
 {
 	size_t	i;
 	size_t	b;
@@ -72,7 +72,7 @@ char	**ft_alloc(char const *s, char c)
 	return (split);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	size_t	i;
 	int		tab;
