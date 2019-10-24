@@ -34,7 +34,7 @@ char		*ft_itoa(int n)
 	num = n < 0 ? -n : n;
 	count = (n <= 0) ? ft_intcount(num) + 1 : ft_intcount(num);
 	if (!(nb = malloc(sizeof(char) * (count + 1))))
-		return (0);
+		return (NULL);
 	nb[count] = '\0';
 	while (count-- != 0)
 	{

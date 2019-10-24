@@ -32,7 +32,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	start = 0;
 	while (s1[start] && ft_isset(s1[start], set) == 1)
 		start++;

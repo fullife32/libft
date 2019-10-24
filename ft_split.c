@@ -79,9 +79,9 @@ char		**ft_split(char const *s, char c)
 	char	**split;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	if ((split = ft_alloc(s, c)) == 0)
-		return (0);
+		return (NULL);
 	i = 0;
 	tab = 0;
 	while (s[i])
