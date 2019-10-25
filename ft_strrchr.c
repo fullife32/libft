@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:03:52 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/20 12:01:56 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/25 12:06:17 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 		i++;
-	if (i == 0 && c == '\0')
-		return ((char *)s + i);
 	while (i >= 0)
 	{
 		if (s[i] == c)
