@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 20:49:24 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/14 21:00:11 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/26 11:53:05 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	size_t	i;
 	char	*str;
+	size_t	i;
 
 	if (!(str = malloc(sizeof(char) * (ft_strlen(s1) + 1))))
 		return (NULL);
