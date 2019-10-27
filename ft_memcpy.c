@@ -6,7 +6,7 @@
 /*   By: eassouli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:44:15 by eassouli          #+#    #+#             */
-/*   Updated: 2019/10/26 12:00:18 by eassouli         ###   ########.fr       */
+/*   Updated: 2019/10/27 12:11:05 by eassouli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t			i;
 	unsigned char	*dest;
 	unsigned char	*source;
+	size_t			i;
 
 	if (!dst && !src && n > 0)
 		return (NULL);
