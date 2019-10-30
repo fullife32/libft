@@ -6,7 +6,7 @@
 #    By: eassouli <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/13 03:45:33 by eassouli          #+#    #+#              #
-#    Updated: 2019/10/24 15:32:35 by eassouli         ###   ########.fr        #
+#    Updated: 2019/10/30 16:54:17 by eassouli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,9 +44,7 @@ SRCS		= \
 			  ft_putchar_fd.c\
 			  ft_putstr_fd.c\
 			  ft_putendl_fd.c\
-			  ft_putnbr_fd.c
-
-SRCS_BONUS	= \
+			  ft_putnbr_fd.c\
 			  ft_lstnew_bonus.c\
 			  ft_lstadd_front_bonus.c\
 			  ft_lstsize_bonus.c\
@@ -58,8 +56,6 @@ SRCS_BONUS	= \
 			  ft_lstmap_bonus.c
 
 OBJS		= $(SRCS:.c=.o)
-
-OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
 NAME		= libft.a
 
@@ -80,14 +76,11 @@ $(NAME):	$(OBJS)
 	$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
-	$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS)
 
 fclean:		clean
 	$(RM) $(NAME)
 
 re:			fclean all
 
-bonus:		all $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
-
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re
