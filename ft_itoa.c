@@ -19,7 +19,7 @@ static int	ft_intcount(unsigned int n)
 	count = 0;
 	while (n != 0)
 	{
-		n = n / 10;
+		n /= 10;
 		count++;
 	}
 	return (count);
@@ -39,7 +39,7 @@ char		*ft_itoa(int n)
 	while (count-- != 0)
 	{
 		nb[count] = num % 10 + '0';
-		num = num / 10;
+		num /= 10;
 	}
 	if (n < 0)
 		nb[0] = '-';

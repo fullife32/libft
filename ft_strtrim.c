@@ -17,7 +17,7 @@ static size_t	ft_isset(char s, char const *set)
 	size_t	i;
 
 	i = 0;
-	while (set[i])
+	while (set[i] != '\0')
 	{
 		if (set[i] == s)
 			return (1);
@@ -34,7 +34,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (s1[start] && ft_isset(s1[start], set) == 1)
+	while (s1[start] != '\0' && ft_isset(s1[start], set) == 1)
 		start++;
 	len = ft_strlen(&s1[start]);
 	while (len > 0 && ft_isset(s1[start + len - 1], set) == 1)
